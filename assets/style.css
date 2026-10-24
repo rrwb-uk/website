@@ -113,6 +113,9 @@ p {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
   font-family: var(--serif);
   font-size: 1.45rem;
   font-weight: 600;
@@ -121,7 +124,13 @@ p {
   line-height: 1.1;
 }
 
-.brand span {
+.brand img {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.brand-name span {
   display: block;
   font-family: var(--sans);
   font-size: 0.7rem;
@@ -210,6 +219,12 @@ p {
   text-align: center;
 }
 
+.hero-logo {
+  width: clamp(130px, 22vw, 180px);
+  height: auto;
+  margin: 0 auto 1.5rem;
+}
+
 .eyebrow {
   font-size: 0.78rem;
   font-weight: 700;
@@ -217,6 +232,10 @@ p {
   text-transform: uppercase;
   color: var(--clay);
   margin-bottom: 1rem;
+}
+
+.eyebrow span {
+  white-space: nowrap;
 }
 
 .hero p.lead {
@@ -241,11 +260,15 @@ p {
     var(--bg);
 }
 
-.page-hero p {
+.page-hero p:not(.eyebrow) {
   color: var(--ink-soft);
   font-size: 1.15rem;
   max-width: 620px;
   margin: 0 auto;
+}
+
+.page-hero + section {
+  padding-top: clamp(1rem, 3vw, 2rem);
 }
 
 /* Sections */
