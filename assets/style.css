@@ -463,7 +463,7 @@ section {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 2rem;
 }
 
@@ -550,4 +550,67 @@ section {
   margin: 1.5rem auto 0;
   border-radius: var(--radius);
   border: 1px solid var(--line);
+}
+
+/* Opening hours */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.hours {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours th,
+.hours td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hours tr:last-child th,
+.hours tr:last-child td {
+  border-bottom: 0;
+}
+
+.hours th {
+  text-align: left;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.hours td {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tag {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--sage-dark);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage-dark);
+  vertical-align: 0.15em;
+}
+
+.tag-late {
+  background: var(--sage-dark);
+  color: #fff;
+}
+
+@media (max-width: 420px) {
+  .tag {
+    display: none;
+  }
 }
