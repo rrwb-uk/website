@@ -220,7 +220,7 @@ p {
 }
 
 .hero-logo {
-  width: clamp(130px, 22vw, 180px);
+  width: clamp(200px, 30vw, 300px);
   height: auto;
   margin: 0 auto 1.5rem;
 }
