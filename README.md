@@ -20,5 +20,11 @@ Then open http://localhost:8000.
 ## Publishing
 
 In the GitHub repo go to **Settings → Pages**, set **Source** to "Deploy from a branch",
-choose `main` and `/ (root)`, then save. The site will be published at
-https://rrwb-uk.github.io/website/.
+choose `main` and `/ (root)`, then save. The site is published at https://rrwb.uk/ (custom domain set by the `CNAME` file;
+DNS is managed at Gandi). The old https://rrwb-uk.github.io/website/ address redirects there.
+
+## SEO
+
+- `sitemap.xml` and `robots.txt`: list the pages for search engines. Add any new page to `sitemap.xml`.
+- Each page has a canonical link and share-preview tags (`og:*`) using `images/share.png`.
+- `index.html` has the business details (address, phone, hours) as JSON-LD for Google.
