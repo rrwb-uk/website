@@ -1,5 +1,5 @@
 // Replace with the studio's Fresha booking page link.
-var BOOKING_URL = "https://www.fresha.com/";
+var BOOKING_URL = "https://l.fresha.com/3zvsv4t30";
 
 document.addEventListener("DOMContentLoaded", function () {
   // Point every "Book" button at the booking page
